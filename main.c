@@ -2,10 +2,8 @@
 
 int main() {
     Link* first = createLink('A');
-    Link* temp = first;
     for (int i = 1; i < 26; i++) {
-        temp->next = createLink(65 + i);
-        temp = temp->next;
+        addDaraToLinkedList(&first, 65 + i);
     }
     showLinkedList(first);
     destroyLink(first);
