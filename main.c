@@ -6,6 +6,7 @@ int main() {
         addDaraToLinkedList(&first, 65 + i);
     }
     showLinkedList(first);
+    printf("\nNumber of links : %d", getLinkedListLength(first));
     destroyLink(first);
     return 0;
 }

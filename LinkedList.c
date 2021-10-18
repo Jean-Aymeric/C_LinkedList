@@ -39,3 +39,13 @@ void addLinkToLinkedList(Link** list, Link* linkToAdd) {
 void addDaraToLinkedList(Link** list, char data) {
     addLinkToLinkedList(list, createLink(data));
 }
+
+int getLinkedListLength(Link* list) {
+    int counter = 0;
+    Link* temporaryLink = list;
+    while(temporaryLink != NULL) {
+        counter++;
+        temporaryLink = temporaryLink->next;
+    }
+   return counter;
+}
