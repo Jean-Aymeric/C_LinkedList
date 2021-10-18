@@ -75,3 +75,13 @@ char getByIndexInList(Link* list, int index) {
     }
     return NULL;
 }
+
+int getCountDataInList(Link* list, char data) {
+    int counter = 0;
+    Link* temporaryLink = list;
+    while(temporaryLink != NULL) {
+        counter += temporaryLink->data == data;
+        temporaryLink = temporaryLink->next;
+    }
+    return counter;
+}

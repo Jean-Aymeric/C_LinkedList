@@ -15,4 +15,5 @@ void addLinkToLinkedList(Link** list, Link* linkToAdd);
 void addDaraToLinkedList(Link** list, char data);
 int getLinkedListLength(Link* list);
 char getByIndexInList(Link* list, int index);
+int getCountDataInList(Link* list, char data);
 #endif //LINKEDLIST_H
