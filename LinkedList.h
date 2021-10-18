@@ -16,4 +16,5 @@ void addDaraToLinkedList(Link** list, char data);
 int getLinkedListLength(Link* list);
 char getByIndexInList(Link* list, int index);
 int getCountDataInList(Link* list, char data);
+void delLinkById(Link* list, int index);
 #endif //LINKEDLIST_H
