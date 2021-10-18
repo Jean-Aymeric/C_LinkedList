@@ -24,15 +24,26 @@ void showLinkedList(Link* linkToShow) {
     printf("NULL");
 }
 
+unsigned short isLinkInList(Link* list, Link* linkToCheck) {
+    unsigned short isPresent = 0;
+    Link* temporaryLink = list;
+    while( (temporaryLink != NULL) && (!isPresent) ) {
+        isPresent = temporaryLink = linkToCheck;
+        temporaryLink = temporaryLink->next;
+    }
+}
+
 void addLinkToLinkedList(Link** list, Link* linkToAdd) {
     if (*list == NULL) {
         list = linkToAdd;
     } else {
-        Link* temporaryLink = *list;
-        while(temporaryLink->next != NULL) {
-            temporaryLink = temporaryLink->next;
+        if (! isLinkInList(*list, linkToAdd)) {
+            Link* temporaryLink = *list;
+            while(temporaryLink->next != NULL) {
+                temporaryLink = temporaryLink->next;
+            }
+            temporaryLink->next = linkToAdd;
         }
-        temporaryLink->next = linkToAdd;
     }
 }
 
