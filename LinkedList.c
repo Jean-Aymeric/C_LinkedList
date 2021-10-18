@@ -60,3 +60,16 @@ int getLinkedListLength(Link* list) {
     }
    return counter;
 }
+
+char getByIndexInList(Link* list, int index) {
+    int counter = 0;
+    Link* temporaryLink = list;
+    while(temporaryLink != NULL && (counter < index)) {
+        counter++;
+        temporaryLink = temporaryLink->next;
+    }
+    if (counter == index) {
+        return temporaryLink->data;
+    }
+    return NULL;
+}
