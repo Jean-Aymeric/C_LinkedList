@@ -1,5 +1,7 @@
 #include "LinkedList.h"
 
+unsigned short isLinkInList(Link* list, Link* linkToCheck);
+
 Link* createLink(char data) {
     Link* createdLink = malloc(sizeof(Link));
     if (createdLink != NULL) {
