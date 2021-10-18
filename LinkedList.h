@@ -11,4 +11,6 @@ typedef struct Link {
 Link* createLink(char data);
 void destroyLink(Link* linkToDestroy);
 void showLinkedList(Link* linkToShow);
+void addLinkToLinkedList(Link** list, Link* linkToAdd);
+void addDaraToLinkedList(Link** list, char data);
 #endif //LINKEDLIST_H

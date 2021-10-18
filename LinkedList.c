@@ -23,3 +23,19 @@ void showLinkedList(Link* linkToShow) {
     }
     printf("NULL");
 }
+
+void addLinkToLinkedList(Link** list, Link* linkToAdd) {
+    if (*list == NULL) {
+        list = linkToAdd;
+    } else {
+        Link* temporaryLink = *list;
+        while(temporaryLink->next != NULL) {
+            temporaryLink = temporaryLink->next;
+        }
+        temporaryLink->next = linkToAdd;
+    }
+}
+
+void addDaraToLinkedList(Link** list, char data) {
+    addLinkToLinkedList(list, createLink(data));
+}
